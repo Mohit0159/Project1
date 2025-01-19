@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_gradient">
+
+    <TextView
+        android:id="@+id/tvcya"
+        android:layout_width="90sp"
+        android:layout_height="70dp"
+        android:text="Hello Sign In!"
+        android:layout_marginTop="15sp"
+        android:layout_marginStart="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:translationY="100dp"
+        android:layout_height="600dp"
+        android:layout_below="@+id/tvcya"
+        android:src="@drawable/white_bg"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/tvmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gmail "
+            android:textColor="#dc143c"
+            android:textSize="20sp"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="50sp"
+            />
+        <EditText
+            android:id="@+id/etentermail"
+
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Gmail Here"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/tvmail"
+            android:layout_marginStart="50dp"
+            />
+        <TextView
+            android:id="@+id/tvpasswords3"
+            android:layout_below="@id/etentermail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="#dc143c"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50sp"
+            />
+        <EditText
+            android:id="@+id/etpasswords3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password Here"
+            android:inputType="textPassword"
+            android:layout_below="@id/tvpasswords3"
+            android:layout_marginStart="50dp"
+            />
+        <TextView
+            android:id="@+id/textviewFp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Forget Password?"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/etpasswords3"
+            android:layout_marginStart="190sp"
+            android:textColorHint="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/btsignUp"
+            android:background="@drawable/button_gradientstyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Sign In"
+            android:textSize="20sp"
+            android:layout_below="@+id/textviewFp"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="70dp"
+            android:layout_marginHorizontal="65dp"
+            />
+        <TextView
+            android:id="@+id/tvdha"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/btsignUp"
+            android:layout_marginTop="110sp"
+            android:layout_marginStart="200sp"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:hint="Dont't have Account?"
+
+            />
+        <TextView
+            android:id="@+id/tvsigin"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/tvdha"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="280sp"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:hint="Sign Up"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
