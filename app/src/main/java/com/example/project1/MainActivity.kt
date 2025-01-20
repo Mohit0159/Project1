@@ -23,14 +23,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        btnSignup=findViewById(R.id.btnsignup)
+        btnSignup=findViewById(R.id.btnsignups1)
         btnSignup?.setOnClickListener{
             var intent = Intent(this, SecondScreen::class.java)
             startActivity(intent)
             Toast.makeText(this, "Switching to Sign Up Page", Toast.LENGTH_SHORT).show()
 
         }
-        btnSignin=findViewById(R.id.btsignin)
+        btnSignin=findViewById(R.id.btsignins1)
         btnSignin?.setOnClickListener{
             var intent = Intent(this, Third_Screen::class.java)
             startActivity(intent)

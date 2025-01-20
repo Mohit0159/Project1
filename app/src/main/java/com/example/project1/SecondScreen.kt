@@ -19,9 +19,11 @@ class SecondScreen : AppCompatActivity() {
     //edittext
     var etfullname: EditText? = null
     var etemail: EditText? = null
-
+    var etpass: EditText?=null
+    var etconfpass:EditText?=null
     //textview
     var tvsigin: TextView? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +36,10 @@ class SecondScreen : AppCompatActivity() {
         }
         //find views
         btnSignup = findViewById(R.id.btsignUp)
-        etfullname = findViewById(R.id.etentername)
-        etemail = findViewById(R.id.etphone)
+        etfullname = findViewById(R.id.etenternames2)
+        etemail = findViewById(R.id.etphones2)
+        etpass=findViewById(R.id.etpasswords2)
+        etconfpass=findViewById(R.id.etconfirmpasss2)
 
         btnSignup?.setOnClickListener {
             if (TextUtils.isEmpty(etfullname?.text.toString())) // check if user have not entered then ask for enter
@@ -45,6 +49,7 @@ class SecondScreen : AppCompatActivity() {
                 var intent = Intent(this, Third_Screen::class.java)
                 startActivity(intent)
                 Toast.makeText(this, "Sign Up Successfully", Toast.LENGTH_SHORT).show()
+                finish()
             }
 
             btnSignup?.setOnClickListener {
@@ -67,11 +72,37 @@ class SecondScreen : AppCompatActivity() {
             }
 
         }
+
+        btnSignup?.setOnClickListener {
+            if (TextUtils.isEmpty(etpass?.text.toString())) // check if user have not entered then ask for enter
+            {
+                Toast.makeText(this, "Enter Password ", Toast.LENGTH_LONG).show()
+            } else {
+                var intent = Intent(this, Third_Screen::class.java)
+                startActivity(intent)
+                Toast.makeText(this, "Sign Up Successfully", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+        }
+
+        btnSignup?.setOnClickListener {
+            if (TextUtils.isEmpty(etconfpass?.text.toString())) // check if user have not entered then ask for enter
+            {
+                Toast.makeText(this, "Enter confirm", Toast.LENGTH_LONG).show()
+            } else {
+                var intent = Intent(this, Third_Screen::class.java)
+                startActivity(intent)
+                Toast.makeText(this, "Sign Up Successfully", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+        }
+
         tvsigin = findViewById(R.id.tvsigin)
         tvsigin?.setOnClickListener {
             var intent = Intent(this, Third_Screen::class.java)
             startActivity(intent)
             Toast.makeText(this, "Switched to Sign in page", Toast.LENGTH_SHORT).show()
+            finish()
         }
     }
 }
